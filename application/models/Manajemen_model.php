@@ -28,4 +28,18 @@ class Manajemen_model extends CI_model {
     {
        return $this->db->get_where('riwayat_barang',['kode_barang' => $kode_barang])->row_array();
     }
+
+    public function ubahDataBarang()
+    {
+        $data = [
+            "kode_barang" => $this->input->post('kode_barang', true),
+            "nama_barang" => $this->input->post('nama_barang', true),
+            "size" => $this->input->post('size', true),
+            "harga" => $this->input->post('harga', true),
+        ];
+
+        $this->db->where('kode_barang',$this->input->post('kode_barang'));
+        $this->db->update('riwayat_barang', $data);
+    }
+
 }

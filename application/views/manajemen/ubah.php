@@ -4,38 +4,44 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    Form Tambah Data Barang
+                    Form Ubah Data Barang
                     </div>
                         <div class="card-body">
                     
                         <form action="" method="post">
+                        <input type="hidden" name="kode_barang" value="<?= $riwayat_barang['kode_barang']?>">
                             <div class="form-group">
                                 <label for="kode_barang">Kode Barang</label>
-                                <input type="text"  name="kode_barang" class="form-control" id="kode_barang" >
+                                <input type="text"  name="kode_barang" class="form-control" id="kode_barang" value="<?= $riwayat_barang['kode_barang'];?>">
                                 <small class="form-text text-danger"><?= form_error('kode_barang'); ?></small>
                             </div>
                             <div class="form-group">
                                 <label for="nama_barang">Nama Barang</label>
-                                <input type="text" class="form-control" id="nama_barang" name="nama_barang" >
+                                <input type="text" class="form-control" id="nama_barang" name="nama_barang" value="<?= $riwayat_barang['nama_barang'];?>">
                                 <small class="form-text text-danger"><?= form_error('nama_barang'); ?></small>
                             </div>
 
                             <div class="form-group">
                                     <label for="size">Size</label>
                                     <select class="form-control" id="size" name="size">
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
-                                    <option value="XXL">XXL</option>
-                                    </select>
+                                    <?php foreach( $size as $s ) : ?>
+                                        <?php if( $s == $riwayat_barang['size'] ) : ?>
+                                         <option value="<?= $s; ?>"selected><?= $s; ?>
+                                         </option>
+                                        <?php else : ?>
+                                        <option value="<?= $s; ?>"><?= $s; ?>
+                                         </option>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
+
                             <div class="form-group">
                                 <label for="harga">Harga</label>
-                                <input type="text" class="form-control" id="harga" name="harga" >
+                                <input type="text" class="form-control" id="harga" name="harga" value="<?= $riwayat_barang['harga'];?>" >
                                 <small class="form-text text-danger"><?= form_error('harga'); ?></small>
                             </div>
-                            <button type="submit" name="tambah" class="btn btn-primary float-right" >Tambah Data</button>
+                            <button type="submit" name="ubah" class="btn btn-primary float-right" >Ubah Data</button>
                          </form>
                         </div>
                     </div>

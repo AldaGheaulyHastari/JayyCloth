@@ -52,4 +52,28 @@ class Manajemen extends CI_Controller {
         $this->load->view('manajemen/detail', $data);
         $this->load->view('templates/footer');
     }
+
+
+    public function ubah($kode_barang)
+    {
+        $data['judul'] = 'Form Ubah Data Barang';
+        $data['riwayat_barang'] = $this->Manajemen_model->getRiwayatBarangByKode($kode_barang);
+        $data['size'] = ['S','M','L','XL','XXL'];
+
+        $this->form_validation->set_rules('kode_barang', 'Kode Barang','required');
+        $this->form_validation->set_rules('nama_barang', 'Nama Barang','required');
+        $this->form_validation->set_rules('size', 'Size','required');
+        $this->form_validation->set_rules('harga', 'Harga','required');
+
+        if( $this->form_validation->run() == FALSE) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('manajemen/ubah', $data);
+            $this->load->view('templates/footer');    
+        }else {
+            $this->Manajemen_model->ubahDataBarang();
+            $this->session->set_flashdata('flash','Diubah');
+            redirect('manajemen');
+        }
+        
+    }
 } 

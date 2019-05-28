@@ -28,6 +28,8 @@
                             <?= $mnj['nama_barang']; ?>
                             <a href="<?= base_url(); ?>manajemen/hapus/<?=$mnj['kode_barang'];?>" class="badge badge-danger float-right" onclick="return confirm('Anda akan menghapus data barang ini,yakin?');">hapus</a>
                            
+                            <a href="<?= base_url(); ?>manajemen/ubah/<?=$mnj['kode_barang'];?>" class="badge badge-success float-right" >ubah</a>
+                            
                             <a href="<?= base_url(); ?>manajemen/detail/<?=$mnj['kode_barang'];?>" class="badge badge-primary float-right" >detail</a>
                             </li>
                     <?php endforeach; ?>
