@@ -8,6 +8,9 @@ class Admin extends CI_Controller
         $data['title'] = 'Dasboard';
         $data['admin'] = $this->db->get_where('users', ['name' => $this->session->userdata('name')])->row_array();
 
-        $this->load->view('user/index', $data);
+
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('admin/index', $data);
+        $this->load->view('templates/footertemplate');
     }
 }
