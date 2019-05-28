@@ -23,4 +23,9 @@ class Manajemen_model extends CI_model {
         $this->db->where('kode_barang', $kode_barang);
         $this->db->delete('riwayat_barang');
     }
+
+    public function getRiwayatBarangByKode($kode_barang)
+    {
+       return $this->db->get_where('riwayat_barang',['kode_barang' => $kode_barang])->row_array();
+    }
 }

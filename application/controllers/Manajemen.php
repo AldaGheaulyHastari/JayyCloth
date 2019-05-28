@@ -43,4 +43,13 @@ class Manajemen extends CI_Controller {
         $this->session->set_flashdata('flash','Dihapus');
         redirect('manajemen');
     }
+
+    public function detail($kode_barang)
+    {
+        $data['judul']='Detail Data Barang';
+        $data['riwayat_barang'] = $this->Manajemen_model->getRiwayatBarangByKode($kode_barang);
+        $this->load->view('templates/header', $data);
+        $this->load->view('manajemen/detail', $data);
+        $this->load->view('templates/footer');
+    }
 } 
