@@ -12,6 +12,9 @@ class Ready extends CI_Controller
     {
         $data['title'] = 'Barang Ready';
         $data['ready'] = $this->Ready_model->getAllReady();
+        if ($this->input->post('keyword')) {
+            $data['ready'] = $this->Ready_model->cariDataBarang();
+        }
         $this->load->view('templates/sidebar', $data);
         $this->load->view('ready/index');
         $this->load->view('templates/footertemplate');

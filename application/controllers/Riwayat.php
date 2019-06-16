@@ -12,6 +12,10 @@ class Riwayat extends CI_Controller
     {
         $data['title'] = 'Riwayat Barang';
         $data['riwayat'] = $this->Riwayat_model->getAllManajemen();
+        if ($this->input->post('keyword')) {
+            $data['riwayat'] = $this->Riwayat_model->cariDataBarang();
+        }
+
         $this->load->view('templates/sidebar', $data);
         $this->load->view('riwayat/index');
         $this->load->view('templates/footertemplate');

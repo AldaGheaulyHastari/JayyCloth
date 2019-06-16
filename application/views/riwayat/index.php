@@ -19,9 +19,28 @@
         </div>
     </div>
 
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <form action="" method="post">
+                <div class="input-group ">
+                    <input type="text" class="form-control" placeholder="Cari Data Barang..." name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Cari<button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <div class="row mt 3">
         <div class="col-md-6">
             <h3>Riwayat Barang</h3>
+            <?php if (empty($riwayat)) : ?>
+                <div class="alert alert-danger" role="alert">
+                    Data Barang Tidak Ditemukan
+                </div>
+            <?php endif; ?>
             <ul class="list-group">
                 <?php foreach ($riwayat as $rwt) : ?>
                     <li class="list-group-item">

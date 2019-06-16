@@ -1,11 +1,10 @@
 <div class="container">
-    <div class="row mt-3">
-        <div class="col-md-6">
-
-            <div class="card">
-                <div class="card-header">
-                    Detail Barang
-                </div>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <img src="..." class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $riwayat_barang['nama_barang'] ?></h5>
                     <p class="card-text"><?= $riwayat_barang['size'] ?></p>
@@ -13,7 +12,5 @@
                     <a href="<?= base_url(); ?>riwayat" class="btn btn-primary">Kembali</a>
                 </div>
             </div>
-
         </div>
     </div>
-</div>

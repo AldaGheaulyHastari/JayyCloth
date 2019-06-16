@@ -42,4 +42,13 @@ class Riwayat_model extends CI_model
         $this->db->where('kd_barang', $this->input->post('kd_barang'));
         $this->db->update('riwayat_barang', $data);
     }
+
+    public function cariDataBarang()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('nama_barang', $keyword);
+        $this->db->or_like('size', $keyword);
+        $this->db->or_like('harga', $keyword);
+        return $this->db->get('riwayat_barang')->result_array();
+    }
 }
