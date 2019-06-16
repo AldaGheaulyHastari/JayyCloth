@@ -55,10 +55,24 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('manajemen') ?>">
+                <a class="nav-link" href="<?= base_url('riwayat') ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Riwayat Barang</span></a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('ready') ?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Barang Ready</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('riwayat') ?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Penjualan</span></a>
+            </li>
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">

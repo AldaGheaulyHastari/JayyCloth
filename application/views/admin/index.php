@@ -1,8 +1,24 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-    <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+    <div class="box">
+        <div class="padding">
+            <i class="fa fa-user"></i>
+            Login sebagai
+            <span class="status blued">
+                Admin:
+
+
+            </span>
+        </div>
+    </div>
+    <div class="box">
+        <div class="padding">
+            <i class="fa fa-clock-o"></i>
+            Waktu
+            <span class="status blued"> <?= date("d-m-Y") ?></span>
+        </div>
+    </div>
 
 </div>
 <!-- /.container-fluid -->
