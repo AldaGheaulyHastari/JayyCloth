@@ -1,24 +1,14 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-    <div class="box">
-        <div class="padding">
-            <i class="fa fa-user"></i>
-            Login sebagai
-            <span class="status blued">
-                Admin:
+    <div align='center'>
+        <b>
+            <h1>Selamat Datang Di Halaman Admin</h1>
+        </b>
+        <p> <br><img class="img" width="750px" height="450px" src="<?= base_url('assets/img/profile/jyyy.png'); ?>">
 
+    </div>
 
-            </span>
-        </div>
-    </div>
-    <div class="box">
-        <div class="padding">
-            <i class="fa fa-clock-o"></i>
-            Waktu
-            <span class="status blued"> <?= date("d-m-Y") ?></span>
-        </div>
-    </div>
 
 </div>
 <!-- /.container-fluid -->

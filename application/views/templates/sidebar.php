@@ -21,6 +21,8 @@
 </head>
 
 <body id="page-top">
+    <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url('assets/') ?>vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -31,7 +33,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-code"></i>
+                    <i class="fas fa-dove"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3"> JayyCloth Admin</div>
             </a>
@@ -42,7 +44,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin') ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fab fa-accusoft"></i>
                     <span>Dashboard</span></a>
             </li>
 
@@ -54,23 +56,42 @@
                 Menu
             </div>
 
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('riwayat/tambah') ?>">
+                    <i class="fas fa-anchor"></i>
+                    <span>Tambah Data Barang</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('riwayat') ?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-tasks"></i>
                     <span>Riwayat Barang</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('ready') ?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-book"></i>
                     <span>Barang Ready</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('riwayat') ?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <a class="nav-link" href="<?= base_url('penjualan') ?>">
+                    <i class="fas fa-baby-carriage"></i>
                     <span>Penjualan</span></a>
             </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('backup/database_backup') ?>">
+                    <i class="fas fa-box-open"></i>
+                    <span>Backup Database</span></a>
+            </li>
+
+
+
+
 
 
 
@@ -116,6 +137,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <span class="status blued"> <?= date("d-m-Y") ?> </span>
                                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/profile/123.png'); ?>">
                             </a>
                             <!-- Dropdown - User Information -->
